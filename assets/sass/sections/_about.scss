@@ -1,0 +1,108 @@
+.about__subtitle{
+    font-size: 54px;
+    font-family: $font-secondary;
+    color: $color-light;
+}
+
+.abilities{
+    // background: blue;
+}
+
+.abilities-row{
+    display: flex;
+    justify-content: space-around;
+    // background: #000;
+    margin-bottom: 65px;
+}
+
+.abilities-cell{
+    width: 250px;
+    // background: green;
+    @include flex-center;
+    flex-direction: column;
+}
+
+.abilities-text{
+    margin: 0;
+    margin-top: 5px;
+    color: $color-light;
+    font-family: $font-secondary;
+    font-size: 34px;
+}
+
+.abilities-icon{
+    width: 120px;
+    height: 120px;
+}
+
+.software-icon{
+    width: 95px;
+    height: 95px;
+}
+
+
+@include change-on(medium){
+    .abilities-row{
+        margin-bottom: 45px;
+    }
+    .abilities-cell{
+        width: 200px;
+    }
+    .abilities-text{
+        font-size: 24px;
+    }
+    .abilities-icon{
+        width: 90px;
+        height: 90px;
+    }
+    
+    .software-icon{
+        width: 75px;
+        height: 75px;
+    }
+}
+
+@include change-on(small){
+    .abilities-row{
+        margin-bottom: 40px;
+    }
+    .abilities-cell{
+        margin-left: 2px;
+        margin-right: 2px;
+        width: 170px;
+    }
+    .abilities-text{
+        font-size: 18px;
+    }
+    .abilities-icon{
+        width: 70px;
+        height: 70px;
+    }
+    
+    .software-icon{
+        width: 65px;
+        height: 65px;
+    }
+}
+
+@include change-on(xsmall){
+    .abilities-row{
+        margin-bottom: 45px;
+    }
+    .abilities-cell{
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+    .abilities-text{
+        font-size: 12px;
+    }
+    .abilities-icon{
+        width: 60px;
+        height: 60px;
+    }
+    
+    .software-icon{
+        width: 50px;
+        height: 50px;
+    }
+}

@@ -1,0 +1,23 @@
+@mixin flex-center(){
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin set-border($size, $color){
+    border: $size solid $color;
+}
+
+@mixin change-on($bp){
+ 
+  @if map-has-key($breakpoints, $bp){
+    @media screen and (max-width: map-get($breakpoints, $bp)) {
+      @content;
+    }  
+  } @else{
+    @media screen and (max-width: $bp){
+      @content;
+    }
+  }
+  
+ }

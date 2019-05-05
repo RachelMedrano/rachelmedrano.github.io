@@ -1,0 +1,24 @@
+// colors
+$color-primary: #fe7f7f;
+$color-primary-dark: #d35f5f;
+$color-secondary: #00aa88;
+$color-light: #f6f4e4;
+$color-dark: #363537;
+// fonts
+$font-primary: 'Lobster', cursive;
+$font-secondary: 'Dosis', sans-serif;
+// utils
+$sidebar-width: 300px;
+$container-height: 600px;
+$section-padding: 50px;
+$main-radius: 5px;
+$section-height: 90vh;
+// responsive breakpoints
+$breakpoints: (
+ xsmall: 540px,
+ small: 660px,
+ medium: 780px,
+ large: 920px,
+ xlarge: 1200px,
+ xxlarge: 2200px,
+);

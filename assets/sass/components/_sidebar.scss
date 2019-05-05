@@ -1,0 +1,138 @@
+.sidebar{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: $sidebar-width;
+    // height: $section-height;
+    // width: 1210px;
+    height: $container-height;
+    background: $color-secondary;
+    padding: 20px 0;
+    @include set-border(3px, $color-dark);
+    border-left: none;
+    border-top-right-radius: $main-radius;
+    border-bottom-right-radius: $main-radius;
+    transition: all 1s ease;
+}
+
+
+
+.profile__picture{
+    border-radius: 50%;
+    width: 175px;
+    height: 175px;
+    @include set-border(6px, $color-light);
+}
+
+.profile__name{
+    margin-top: 15px;
+    margin-bottom: 0;
+    font-size: 32px;
+    font-family: $font-primary;
+    color: $color-light;
+}
+.profile__title{
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 30px;
+    font-family: $font-secondary;
+    color: $color-light;
+}
+
+.divider{
+    width: 45px;
+    height: 2px!important;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background: $color-dark;
+    // background: red;
+}
+
+.divider--bottom{
+    height: 2px!important;
+
+}
+
+.profile__info-container{
+    margin-top: 0;
+    font-size: 20px;
+    color: $color-light;
+}
+
+.profile__info{
+    margin-top: 0;
+    margin-bottom: 20px;
+    &:last-child{
+        margin-bottom: 0;
+    }
+}
+
+.profile__icon{
+    text-align: center;
+    width: 30px;
+}
+
+.profile__link{
+    text-decoration: none;
+    color: $color-light;
+    padding: 0 2.5px;
+    border-radius: $main-radius;
+    &:hover{
+        background: $color-light;
+        color: $color-secondary;
+    }
+}
+
+.profile__link--mail{
+    font-size: 18px;
+}
+
+.profile__text{
+}
+
+.button-sidebar{
+    @include flex-center;
+    position: fixed;
+    width: 35px;
+    height: 35px;
+    color: $color-dark;
+    background: $color-light;
+    border-bottom-left-radius: $main-radius;
+    border: 2.5px solid $color-dark;
+    cursor: pointer;
+    transform: translateX(1200%);
+    transition: all 1s ease;
+}
+
+@include change-on(1100px){
+    .sidebar{
+        transform: translateX(1200%);
+        border-left: 3px solid $color-dark;
+        transition: all 1s ease-in-out;
+    }
+    .content{
+        margin-right: 0!important;
+        border-radius: $main-radius;
+    }
+    .button-sidebar{
+        z-index: 100;
+        transition: all .5s  ease;
+        transform: translateX(0);
+    }
+ 
+}
+
+@media screen and (max-height: 585px) {
+    .profile__picture{
+        display: none;
+    }
+}  
+
+
+.sidebar--active{
+    z-index: 99;
+    transform: translateX(0);
+    transition: all 1s ease-in-out;
+}

@@ -1,0 +1,33 @@
+.button-top{
+    position: absolute;
+    bottom: 1%;
+    left: 1%;
+    text-decoration: none;
+}
+
+.button-top--disable{
+    pointer-events: none !important;
+    cursor: default;
+}
+
+.button-top__icon{
+    opacity: 0;
+    font-size: 28px;
+    color: $color-light;
+    transition: all .5s;
+    cursor: pointer;
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+
+.button-top--active{
+    opacity: 1;
+    transition: all .5s;
+}
+
+@include change-on(xsmall){
+    .button-top__icon{
+        font-size: 34px;
+    }
+}
